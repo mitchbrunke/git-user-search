@@ -1,6 +1,8 @@
 import "./App.css";
 import { useState, useEffect, useRef } from "react";
 import Infobox from "./components/Infobox";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAdjust } from "@fortawesome/free-solid-svg-icons";
 
 //search by username
 //view info about user
@@ -12,6 +14,8 @@ function App() {
   const [formInput, setFormInput] = useState("");
   //state to take input and set it as the userName
   const [formData, setFormData] = useState("");
+  //state for light/dark mode
+  const [darkMode, setDarkMode] = useState(false);
   //useRef to get form input
   const formRef = useRef();
 
@@ -44,7 +48,10 @@ function App() {
     <div className="App">
       <div className="top">
         <h2>devfinder</h2>
-        <p>light</p>
+        <p onClick={(e) => setDarkMode(!darkMode)} id="modeToggle">
+          <FontAwesomeIcon icon={faAdjust} />
+          {!darkMode ? <p> light </p> : <p> dark </p>}
+        </p>
       </div>
 
       <form

@@ -1,28 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
-
-body {
-  background-color: #F6F8FF;
-  font-family: 'Space Mono', monospace;
-  color: #4B6A9B;
-  
-}
-
-button {
-  background: #0079FF;
-  color: #FFFFFF;
-  font-weight: bold;
-  border: none;
-  border-radius: 10px;
-}
-
-input {
-  border: none;
-}
-
 .App {
   width: 90vw;
   margin: auto;
-  color: #4B6A9B;
+  color: #4b6a9b;
 }
 
 .top {
@@ -30,22 +9,21 @@ input {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  height: 10vh;
 }
-
 
 input {
   width: calc(100% - 2rem);
   height: 40px;
   padding: 1.2rem;
-  background: #FEFEFE;
-box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
-border-radius: 15px;
-  
+  background: #fefefe;
+  border: none;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+  border-radius: 15px;
 }
 
 form {
   position: relative;
-  
 }
 
 form button {
@@ -54,18 +32,16 @@ form button {
   right: 10px;
   height: 80%;
   padding: 1rem;
-  
 }
 
 .userContainer {
   display: flex;
   flex-direction: column;
-  background-color: #FEFEFE;
+  background-color: #fefefe;
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
-border-radius: 15px;
-padding: 2rem;
-margin-top: 2rem;
-
+  border-radius: 15px;
+  padding: 2rem;
+  margin-top: 2rem;
 }
 
 .userInfo {
@@ -74,22 +50,22 @@ margin-top: 2rem;
   justify-content: center;
   align-items: flex-start;
   height: 15vh;
- 
 }
 
-.userInfo > p, h6, h3 {
+.userInfo > p,
+h6,
+h3 {
   margin: 0;
-  padding: .3rem 0;
+  padding: 0.3rem 0;
 }
 
 .userInfo p {
-  color:#697C9A;
-  font-size: .8em;
-
+  color: #697c9a;
+  font-size: 0.8em;
 }
 
 .userInfo h6 {
-  color: #0079FF;
+  color: #0079ff;
 }
 
 .top img {
@@ -99,30 +75,45 @@ margin-top: 2rem;
 }
 
 .statbox {
-  background: #F6F8FF;
-border-radius: 10px;
-display: flex;
-justify-content: space-evenly;
-align-items: center;
+  background: #f6f8ff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 #number {
   font-weight: bold;
-  color: #2B3442;
+  color: #2b3442;
   text-align: center;
-  margin-top: -.8rem;
+  margin-top: -0.8rem;
 }
 
 .randomInfo {
- display: flex;
- flex-direction: column;
- justify-content: space-evenly;
- height: 20vh;
- margin-top: 1rem;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 20vh;
+  margin-top: 1rem;
 }
 
 .icon {
   width: 4vw;
   padding-right: 1rem;
+}
+
+button {
+  background: #0079ff;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+}
+
+#modeToggle {
+  width: 20vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }

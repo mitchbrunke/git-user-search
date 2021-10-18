@@ -2,10 +2,8 @@ import "../App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBuilding,
-  faCoffee,
   faLink,
   faMapMarkerAlt,
-  faMapPin,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Infobox = ({ userData }) => {
