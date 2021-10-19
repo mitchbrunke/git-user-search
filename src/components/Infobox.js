@@ -2,6 +2,7 @@ import "../App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBuilding,
+  faHashtag,
   faLink,
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
@@ -50,19 +51,30 @@ const Infobox = ({ userData }) => {
       </div>
 
       <div className="randomInfo">
-        <p>
-          <FontAwesomeIcon class="icon" icon={faMapMarkerAlt} />
-          {userData.location}
-        </p>
-        <p>
-          {" "}
-          <FontAwesomeIcon class="icon" icon={faLink} />
-          {userData.blog}
-        </p>
-        <p>
-          <FontAwesomeIcon class="icon" icon={faBuilding} />
-          {userData.company}
-        </p>
+        {userData && (
+          <p>
+            <FontAwesomeIcon className="icon" icon={faMapMarkerAlt} />
+            {userData.location}
+          </p>
+        )}
+        {userData.blog && (
+          <p>
+            <FontAwesomeIcon className="icon" icon={faLink} />
+            {userData.blog}
+          </p>
+        )}
+        {userData.company && (
+          <p>
+            <FontAwesomeIcon className="icon" icon={faBuilding} />
+            {userData.company}
+          </p>
+        )}
+        {userData.twitter_username && (
+          <p>
+            <FontAwesomeIcon className="icon" icon={faHashtag} />
+            {userData.twitter_username}
+          </p>
+        )}
       </div>
     </div>
   );

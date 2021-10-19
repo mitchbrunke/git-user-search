@@ -44,9 +44,17 @@ function App() {
     };
   }, [formData, username]);
 
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    // dark mode
+    console.log("dark mode bois");
+  }
+
   return (
     <div className="App">
-      <div className="top">
+      <div className="nav">
         <h2>devfinder</h2>
         <p onClick={(e) => setDarkMode(!darkMode)} id="modeToggle">
           <FontAwesomeIcon icon={faAdjust} />

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -9,7 +10,12 @@ body {
   color: #4b6a9b;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+@media (prefers-color-scheme: dark) {
+
+  body {
+    background-color: #141D2F;
+    font-family: "Space Mono", monospace;
+    color: #ffff;
+    }
+
 }

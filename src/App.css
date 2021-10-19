@@ -1,3 +1,6 @@
+/* main styles with dark mode media query at the bottom. SHOULD HAVE USED SASS */
+
+
 .App {
   width: 90vw;
   margin: auto;
@@ -28,9 +31,9 @@ form {
 
 form button {
   position: absolute;
-  top: 10px;
+  top: 15px;
   right: 10px;
-  height: 80%;
+  height: 60%;
   padding: 1rem;
   background: #0079ff;
   color: #ffffff;
@@ -42,6 +45,14 @@ form button {
 /* userinfo styles start here */
 
 .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+}
+
+.nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -108,15 +119,134 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 1rem 0;
   height: 15vh;
-  border: 2px solid blue;
 }
 
 .randomInfo p {
-  margin: 0.3rem 0;
+  margin: 0.5rem 0;
 }
 
 .icon {
   width: 4vw;
   padding-right: 1rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .App {
+    width: 60vw;
+    margin: auto;
+  }
+
+  form button {
+    top: 15px;
+    right: 10px;
+    height: 60%;
+    padding: 1rem 2rem;
+  }
+
+  .top {
+    height: 15vh;
+  }
+
+  .top img {
+    height: 15vh;
+    width: auto;
+  }
+
+  #modeToggle {
+    width: 12vw;
+   
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .App {
+    width: 45vw;
+    margin: auto;
+  }
+
+  #modeToggle {
+    width: 7vw;
+  }
+
+  .userInfo {
+    width: 65%;
+    max-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  #date {
+    padding-top: .5rem;
+  }
+
+  .randomInfo {
+   
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 10vh;
+    justify-content: flex-start;
+  }
+
+}
+
+@media only screen and (min-width: 1500px) {
+.App {
+  max-width: 700px;
+}
+
+.userInfo {
+  width: 55%;
+}
+
+.top img {
+  height: 12vh;
+  width: auto;
+}
+
+#modeToggle {
+  max-width: 80px;
+  
+}
+
+.userContainer {
+  padding: 5rem;
+}
+}
+
+@media (prefers-color-scheme: dark) {
+
+  .App{
+    background-color: #141D2F;
+    color: #ffff;
+    }
+
+    .userContainer {
+      background-color: #1E2A47;
+      box-shadow: none;
+    }
+
+    .statbox {
+      background-color: #141D2F;
+    color: #ffff;
+    }
+
+    .statbox #number  {
+      color: white;
+    }
+
+    input {
+      background-color: #1E2A47;
+      box-shadow: none;
+      color: white;
+    }
+
+    input::placeholder {
+      color: white;
+    }
 }
